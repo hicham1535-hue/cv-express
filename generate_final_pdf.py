@@ -88,7 +88,7 @@ def main():
         P("Médecin généraliste et médecin de travail diplômée de l’Université de Reims", 10.6, 14, color=colors.HexColor("#5b6672")),
         Spacer(1, 3 * mm),
         P(
-            "Profil fondé sur la rigueur et le sens de l’écoute, avec un parcours construit entre cabinet, remplacements, expérience hospitalière et santé au travail.",
+            "Profil clinique fondé sur la rigueur, le sens de l’écoute, l’adaptation aux contextes variés et une solide expérience de terrain.",
             9.4,
             13,
         ),
