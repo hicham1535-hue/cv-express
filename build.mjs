@@ -62,11 +62,17 @@ function toBytes(base64) {
 }
 
 function assetResponse(asset) {
+  const headers = {
+    "content-type": asset.contentType,
+    "cache-control": "public, max-age=3600",
+  };
+
+  if (asset.path.endsWith(".pdf")) {
+    headers["content-disposition"] = 'attachment; filename="Alkhansae_CV 2026.pdf"';
+  }
+
   return new Response(toBytes(asset.base64), {
-    headers: {
-      "content-type": asset.contentType,
-      "cache-control": "public, max-age=3600",
-    },
+    headers,
   });
 }
 
