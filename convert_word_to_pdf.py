@@ -30,7 +30,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 ROOT = Path(__file__).resolve().parent
 DOCX = ROOT / "Alkhansae_CV 2026.docx"
-OUT = ROOT / "Alkhansae_CV_2026_PDF.pdf"
+OUT = ROOT / "Alkhansae_CV 2026.pdf"
 EXTRACT = ROOT / "_word_extract"
 SITE_URL = "https://alkhansae-cv-medecine-travail.hicham1535.chatgpt.site"
 
@@ -204,7 +204,7 @@ def main():
     text_block = [
         Paragraph(header[0], style("name", 20, colors.HexColor("#18222d"), bold=True)),
         Spacer(1, 1.2 * mm),
-        Paragraph("Médecin généraliste | Médecin du travail diplômée de l’Université de Reims", style("sub", 10.2, colors.HexColor("#5a6673"))),
+        Paragraph("Médecin généraliste | Médecin de travail diplômée de l’Université de Reims", style("sub", 10.2, colors.HexColor("#5a6673"))),
         Spacer(1, 2 * mm),
         Paragraph("Profil clinique fondé sur la rigueur, l’écoute, l’adaptation aux contextes variés et une solide expérience de terrain.", style("body", 9.8, colors.HexColor("#33404d"), leading=13)),
     ]
