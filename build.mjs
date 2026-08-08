@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 const root = process.cwd();
 const dist = resolve(root, "dist");
 const pdfFile = "Alkhansae_CV_2026_PDF.pdf";
+const portraitFile = "ChatGPT Image 8 août 2026, 21_34_23.png";
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
@@ -12,7 +13,7 @@ await mkdir(resolve(dist, "server"), { recursive: true });
 const filesToCopy = [
   "index.html",
   pdfFile,
-  "WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg",
+  portraitFile,
   ".openai/hosting.json",
 ];
 
@@ -32,9 +33,9 @@ const assetFiles = [
     contentType: "application/pdf",
   },
   {
-    path: "/WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg",
-    file: resolve(root, "WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg"),
-    contentType: "image/jpeg",
+    path: `/${portraitFile}`,
+    file: resolve(root, portraitFile),
+    contentType: "image/png",
   },
 ];
 
