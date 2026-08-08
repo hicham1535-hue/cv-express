@@ -30,7 +30,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 ROOT = Path(__file__).resolve().parent
 DOCX = ROOT / "Alkhansae_CV 2026.docx"
-OUT = ROOT / "Alkhansae_CV 2026.pdf"
+OUT = ROOT / "Alkhansae_CV_2026_PDF.pdf"
 EXTRACT = ROOT / "_word_extract"
 SITE_URL = "https://alkhansae-cv-medecine-travail.hicham1535.chatgpt.site"
 

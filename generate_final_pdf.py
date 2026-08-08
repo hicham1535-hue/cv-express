@@ -15,7 +15,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import BaseDocTemplate, Frame, PageTemplate, Paragraph, Spacer, Table, TableStyle, Image
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / "Alkhansae_CV 2026.pdf"
+OUT = ROOT / "Alkhansae_CV_2026_PDF.pdf"
 PHOTO = ROOT / "WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg"
 SITE_URL = "https://alkhansae-cv-medecine-travail.hicham1535.chatgpt.site/cv-dr-alkhansae"
 

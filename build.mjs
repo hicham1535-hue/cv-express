@@ -10,7 +10,7 @@ await mkdir(resolve(dist, "server"), { recursive: true });
 
 const filesToCopy = [
   "index.html",
-  "Alkhansae_CV 2026.pdf",
+  "Alkhansae_CV_2026_PDF.pdf",
   "WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg",
   ".openai/hosting.json",
 ];
@@ -26,8 +26,8 @@ const assetFiles = [
     contentType: "text/html; charset=utf-8",
   },
   {
-    path: "/Alkhansae_CV 2026.pdf",
-    file: resolve(root, "Alkhansae_CV 2026.pdf"),
+    path: "/Alkhansae_CV_2026_PDF.pdf",
+    file: resolve(root, "Alkhansae_CV_2026_PDF.pdf"),
     contentType: "application/pdf",
   },
   {
@@ -68,7 +68,7 @@ function assetResponse(asset) {
   };
 
   if (asset.path.endsWith(".pdf")) {
-    headers["content-disposition"] = 'attachment; filename="Alkhansae_CV 2026.pdf"';
+    headers["content-disposition"] = 'attachment; filename="Alkhansae_CV_2026_PDF.pdf"';
   }
 
   return new Response(toBytes(asset.base64), {
