@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 
 const root = process.cwd();
 const dist = resolve(root, "dist");
+const pdfFile = "Alkhansae_CV_2026_PDF.pdf";
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
@@ -10,7 +11,7 @@ await mkdir(resolve(dist, "server"), { recursive: true });
 
 const filesToCopy = [
   "index.html",
-  "Alkhansae_CV_2026_PDF.pdf",
+  pdfFile,
   "WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg",
   ".openai/hosting.json",
 ];
@@ -26,8 +27,8 @@ const assetFiles = [
     contentType: "text/html; charset=utf-8",
   },
   {
-    path: "/Alkhansae_CV_2026_PDF.pdf",
-    file: resolve(root, "Alkhansae_CV_2026_PDF.pdf"),
+    path: `/${pdfFile}`,
+    file: resolve(root, pdfFile),
     contentType: "application/pdf",
   },
   {
@@ -52,6 +53,7 @@ const serverBundle = `const ASSETS = new Map(${JSON.stringify(assets)}.map((asse
   asset,
 ]));
 
+const PDF_FILENAME = ${JSON.stringify(pdfFile)};
 const CANONICAL_PATH = "/cv-dr-alkhansae";
 
 function toBytes(base64) {
@@ -68,7 +70,7 @@ function assetResponse(asset) {
   };
 
   if (asset.path.endsWith(".pdf")) {
-    headers["content-disposition"] = 'attachment; filename="Alkhansae_CV_2026_PDF.pdf"';
+    headers["content-disposition"] = 'attachment; filename="' + PDF_FILENAME + '"';
   }
 
   return new Response(toBytes(asset.base64), {
