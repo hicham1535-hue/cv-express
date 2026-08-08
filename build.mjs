@@ -53,6 +53,8 @@ const serverBundle = `const ASSETS = new Map(${JSON.stringify(assets)}.map((asse
   asset,
 ]));
 
+const CANONICAL_PATH = "/cv-dr-alkhansae";
+
 function toBytes(base64) {
   const bin = atob(base64);
   const out = new Uint8Array(bin.length);
@@ -75,6 +77,10 @@ export default {
     const pathname = decodeURIComponent(url.pathname);
 
     if (pathname === "/") {
+      return Response.redirect(new URL(CANONICAL_PATH, url), 302);
+    }
+
+    if (pathname === CANONICAL_PATH) {
       return assetResponse(ASSETS.get("/index.html"));
     }
 
