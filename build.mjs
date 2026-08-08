@@ -10,7 +10,7 @@ await mkdir(resolve(dist, "server"), { recursive: true });
 
 const filesToCopy = [
   "index.html",
-  "Alkhansae_CV 2026.docx",
+  "Alkhansae_CV_2026_PDF.pdf",
   "WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg",
   ".openai/hosting.json",
 ];
@@ -26,10 +26,9 @@ const assetFiles = [
     contentType: "text/html; charset=utf-8",
   },
   {
-    path: "/Alkhansae_CV 2026.docx",
-    file: resolve(root, "Alkhansae_CV 2026.docx"),
-    contentType:
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    path: "/Alkhansae_CV_2026_PDF.pdf",
+    file: resolve(root, "Alkhansae_CV_2026_PDF.pdf"),
+    contentType: "application/pdf",
   },
   {
     path: "/WhatsApp Image 2025-06-07 à 12.37.23_bd4a3f26.jpg",
