@@ -206,7 +206,7 @@ def main():
         Spacer(1, 1.2 * mm),
         Paragraph("Médecin généraliste | Médecin de travail diplômée de l’Université de Reims", style("sub", 10.2, colors.HexColor("#5a6673"))),
         Spacer(1, 2 * mm),
-        Paragraph("Profil clinique fondé sur la rigueur, l’écoute, l’adaptation aux contextes variés et une solide expérience de terrain.", style("body", 9.8, colors.HexColor("#33404d"), leading=13)),
+        Paragraph("Profil clinique fondé sur la rigueur et le sens de l’écoute.", style("body", 9.8, colors.HexColor("#33404d"), leading=13)),
     ]
     contact_lines = header[1:4]
     contact_tbl = Table(
